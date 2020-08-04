@@ -27,7 +27,7 @@ class SelectPersonViewController: UIViewController {
     @IBAction func randomPersonClicked(_ sender: Any) {
         let idPerson = Int.random(in: 1...87)
         
-        personRequest.getRandomPersonUrlSession(id: idPerson) { (person) in
+        personRequest.getRandomPersonAlamo(id: idPerson) { (person) in
             self.personName.text = person?.name
             self.personHeight.text = person?.height
             self.personMass.text = person?.mass
