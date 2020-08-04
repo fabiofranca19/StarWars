@@ -9,23 +9,37 @@
 /* Begin PBXBuildFile section */
 		E673E2D524D842B7002717A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E673E2D424D842B7002717A3 /* AppDelegate.swift */; };
 		E673E2D724D842B7002717A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E673E2D624D842B7002717A3 /* SceneDelegate.swift */; };
-		E673E2D924D842B7002717A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E673E2D824D842B7002717A3 /* ViewController.swift */; };
+		E673E2D924D842B7002717A3 /* SelectPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E673E2D824D842B7002717A3 /* SelectPersonViewController.swift */; };
 		E673E2DC24D842B7002717A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E673E2DA24D842B7002717A3 /* Main.storyboard */; };
 		E673E2DF24D842B7002717A3 /* StarWars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E673E2DD24D842B7002717A3 /* StarWars.xcdatamodeld */; };
 		E673E2E124D842BB002717A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E673E2E024D842BB002717A3 /* Assets.xcassets */; };
 		E673E2E424D842BB002717A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E673E2E224D842BB002717A3 /* LaunchScreen.storyboard */; };
+		E673E2EE24D844D4002717A3 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E673E2EB24D844D4002717A3 /* Starjedi.ttf */; };
+		E673E2EF24D844D4002717A3 /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E673E2EC24D844D4002717A3 /* Starjhol.ttf */; };
+		E673E2F024D844D4002717A3 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E673E2ED24D844D4002717A3 /* Starjout.ttf */; };
+		E673E2F724D84C30002717A3 /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E673E2F624D84C30002717A3 /* BlackBgView.swift */; };
+		E6EF462D24D9A67100A99E54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF462C24D9A67100A99E54 /* Constants.swift */; };
+		E6EF463024D9A70A00A99E54 /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF462F24D9A70A00A99E54 /* PersonApi.swift */; };
+		E6EF463224D9B25A00A99E54 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF463124D9B25A00A99E54 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E673E2D124D842B7002717A3 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E673E2D424D842B7002717A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E673E2D624D842B7002717A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E673E2D824D842B7002717A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E673E2D824D842B7002717A3 /* SelectPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonViewController.swift; sourceTree = "<group>"; };
 		E673E2DB24D842B7002717A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E673E2DE24D842B7002717A3 /* StarWars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWars.xcdatamodel; sourceTree = "<group>"; };
 		E673E2E024D842BB002717A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E673E2E324D842BB002717A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E673E2E524D842BB002717A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E673E2EB24D844D4002717A3 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		E673E2EC24D844D4002717A3 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		E673E2ED24D844D4002717A3 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
+		E673E2F624D84C30002717A3 /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBgView.swift; sourceTree = "<group>"; };
+		E6EF462C24D9A67100A99E54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E6EF462F24D9A70A00A99E54 /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
+		E6EF463124D9B25A00A99E54 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +72,14 @@
 		E673E2D324D842B7002717A3 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				E6EF462E24D9A6F300A99E54 /* Services */,
+				E673E2F524D844FB002717A3 /* Model */,
+				E673E2F424D844F6002717A3 /* Controller */,
+				E673E2F324D844F0002717A3 /* View */,
+				E6EF462B24D9A65F00A99E54 /* Utils */,
+				E673E2F224D844E3002717A3 /* Resources */,
 				E673E2D424D842B7002717A3 /* AppDelegate.swift */,
 				E673E2D624D842B7002717A3 /* SceneDelegate.swift */,
-				E673E2D824D842B7002717A3 /* ViewController.swift */,
 				E673E2DA24D842B7002717A3 /* Main.storyboard */,
 				E673E2E024D842BB002717A3 /* Assets.xcassets */,
 				E673E2E224D842BB002717A3 /* LaunchScreen.storyboard */,
@@ -68,6 +87,64 @@
 				E673E2DD24D842B7002717A3 /* StarWars.xcdatamodeld */,
 			);
 			path = StarWars;
+			sourceTree = "<group>";
+		};
+		E673E2F124D844D9002717A3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E673E2EB24D844D4002717A3 /* Starjedi.ttf */,
+				E673E2EC24D844D4002717A3 /* Starjhol.ttf */,
+				E673E2ED24D844D4002717A3 /* Starjout.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E673E2F224D844E3002717A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E673E2F124D844D9002717A3 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E673E2F324D844F0002717A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E673E2F624D84C30002717A3 /* BlackBgView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E673E2F424D844F6002717A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E673E2D824D842B7002717A3 /* SelectPersonViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E673E2F524D844FB002717A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6EF463124D9B25A00A99E54 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6EF462B24D9A65F00A99E54 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E6EF462C24D9A67100A99E54 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6EF462E24D9A6F300A99E54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E6EF462F24D9A70A00A99E54 /* PersonApi.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +207,9 @@
 			files = (
 				E673E2E424D842BB002717A3 /* LaunchScreen.storyboard in Resources */,
 				E673E2E124D842BB002717A3 /* Assets.xcassets in Resources */,
+				E673E2EE24D844D4002717A3 /* Starjedi.ttf in Resources */,
+				E673E2EF24D844D4002717A3 /* Starjhol.ttf in Resources */,
+				E673E2F024D844D4002717A3 /* Starjout.ttf in Resources */,
 				E673E2DC24D842B7002717A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E673E2F724D84C30002717A3 /* BlackBgView.swift in Sources */,
 				E673E2DF24D842B7002717A3 /* StarWars.xcdatamodeld in Sources */,
-				E673E2D924D842B7002717A3 /* ViewController.swift in Sources */,
+				E673E2D924D842B7002717A3 /* SelectPersonViewController.swift in Sources */,
 				E673E2D524D842B7002717A3 /* AppDelegate.swift in Sources */,
+				E6EF463024D9A70A00A99E54 /* PersonApi.swift in Sources */,
 				E673E2D724D842B7002717A3 /* SceneDelegate.swift in Sources */,
+				E6EF463224D9B25A00A99E54 /* Person.swift in Sources */,
+				E6EF462D24D9A67100A99E54 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
