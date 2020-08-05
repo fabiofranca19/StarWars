@@ -8,8 +8,10 @@
 
 import UIKit
 
-class StarshipViewController: UIViewController {
+class StarshipViewController: UIViewController,PersonProtocol {
 
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

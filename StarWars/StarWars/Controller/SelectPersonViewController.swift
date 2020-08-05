@@ -22,6 +22,7 @@ class SelectPersonViewController: UIViewController {
     @IBOutlet weak var moviesBtn: UIButton!
     
     var personRequest = PersonApi()
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class SelectPersonViewController: UIViewController {
         
         personRequest.getRandomPersonAlamo(id: idPerson) { (person) in
             self.setupView(person: person)
+            self.person = person
         }
     }
     
@@ -50,15 +52,14 @@ class SelectPersonViewController: UIViewController {
         moviesBtn.isEnabled = !person.movieUrls.isEmpty
     }
     
-    @IBAction func homeWorldBtnClicked(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if var destination = segue.destination as? PersonProtocol {
+            destination.person = self.person
+        }
     }
-    @IBAction func vehiclesBtnClicked(_ sender: Any) {
-    }
-    @IBAction func starshipBtnClicked(_ sender: Any) {
-    }
-    @IBAction func movieBtnClicked(_ sender: Any) {
-    }
-    
     
 }
 
+protocol PersonProtocol {
+    var person: Person! { get set }
+}

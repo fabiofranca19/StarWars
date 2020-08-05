@@ -8,8 +8,10 @@
 
 import UIKit
 
-class MovieViewController: UIViewController {
+class MovieViewController: UIViewController,PersonProtocol {
 
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -8,8 +8,10 @@
 
 import UIKit
 
-class VehicleViewController: UIViewController {
+class VehicleViewController: UIViewController,PersonProtocol {
 
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

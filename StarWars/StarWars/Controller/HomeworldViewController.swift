@@ -8,23 +8,31 @@
 
 import UIKit
 
-class HomeworldViewController: UIViewController {
-
+class HomeworldViewController: UIViewController,PersonProtocol {
+    
+    @IBOutlet weak var nameHomeLabel: UILabel!
+    @IBOutlet weak var climateHomeLabel: UILabel!
+    @IBOutlet weak var terrainHomeLabel: UILabel!
+    @IBOutlet weak var populationHomeLabel: UILabel!
+    
+    
+    var person: Person!
+    var homeRequest = HomeWorldApi()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        homeRequest.getHomeWorld(url: person.homeworldUrl) { (homeWorld) in
+            self.setupView(home: homeWorld)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView(home: HomeWorld) {
+        nameHomeLabel.text = home.name
+        climateHomeLabel.text = home.climate
+        terrainHomeLabel.text = home.terrain
+        populationHomeLabel.text = home.population
     }
-    */
+
 
 }
