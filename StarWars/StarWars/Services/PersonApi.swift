@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class PersonApi {
     
+    // Web request with AlamoFire and Codable
     func getRandomPersonAlamo(id: Int,completion: @escaping PersonResponseCompletion){
         
         guard let url = URL(string: "\(URL_PERSON)\(id)") else{return}
@@ -19,35 +20,74 @@ class PersonApi {
         AF.request(url).responseJSON { (data) in
             if let error = data.error {
                 debugPrint(error)
-                completion(nil)
                 return
             }
             
+            guard let data = data.data else{
+                return
+            }
+            let jsonDecoder = JSONDecoder()
+            do{
+                let person = try jsonDecoder.decode(Person.self, from: data)
+                completion(person)
+            }catch{
+                debugPrint(error.localizedDescription)
+            }
+        }
+    }
+    
+//    // Web request with AlamoFire and SwiftyJSON
+//    func getRandomPersonAlamo(id: Int,completion: @escaping PersonResponseCompletion){
+//
+//        guard let url = URL(string: "\(URL_PERSON)\(id)") else{return}
+//
+//        AF.request(url).responseJSON { (data) in
+//            if let error = data.error {
+//                debugPrint(error)
+//                completion(nil)
+//                return
+//            }
+//
+//            guard let data = data.data else{
+//                completion(nil)
+//                return
+//            }
+//
+//            do{
+//                let jsonSwift = try JSON(data: data)
+//                let person = self.parsePersonSwifty(json: jsonSwift)
+//                completion(person)
+//            }catch{
+//                debugPrint(error.localizedDescription)
+//                completion(nil)
+//            }
+//        }
+//    }
+    
+//    // Web request with AlamoFire
+//    func getRandomPersonAlamo(id: Int,completion: @escaping PersonResponseCompletion){
+//
+//        guard let url = URL(string: "\(URL_PERSON)\(id)") else{return}
+//
+//        AF.request(url).responseJSON { (data) in
+//            if let error = data.error {
+//                debugPrint(error)
+//                completion(nil)
+//                return
+//            }
+//
 //            guard let json = data.value as? [String:Any] else{
 //                completion(nil)
 //                return
 //            }
-            
+//
 //            let person = self.parsePersonManual(json: json)
 //            DispatchQueue.main.async {
 //                completion(person)
 //            }
-            
-            guard let data = data.data else{
-                completion(nil)
-                return
-            }
-            
-            do{
-                let jsonSwift = try JSON(data: data)
-                let person = self.parsePersonSwifty(json: jsonSwift)
-                completion(person)
-            }catch{
-                debugPrint(error.localizedDescription)
-                completion(nil)
-            }
-        }
-    }
+//
+//        }
+//    }
     
     func getRandomPersonUrlSession(id: Int,completion: @escaping PersonResponseCompletion) {
         
@@ -56,7 +96,6 @@ class PersonApi {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 debugPrint(error.localizedDescription)
-                 completion(nil)
                 return
             }
             guard let data = data else{return}
@@ -69,11 +108,9 @@ class PersonApi {
                         completion(person)
                     }
                 }else{
-                    completion(nil)
                 }
             }catch{
                 debugPrint(error.localizedDescription)
-                completion(nil)
             }
             print("Response = \(response!)")
         }
@@ -93,7 +130,7 @@ class PersonApi {
         let starshipUrls = json["starships"].arrayValue.map({$0.stringValue})
         
         
-        return Person(name: name, height: height, mass: mass, hair: hair, birthYear: birthYear, gender: gender, homeworldUrl: homeworldUrl, filmUrls: filmUrls, vehicleUrls: vehicleUrls, starshipUrls: starshipUrls)
+        return Person(name: name, height: height, mass: mass, hair: hair, birthYear: birthYear, gender: gender, homeworldUrl: homeworldUrl, movieUrls: filmUrls, vehicleUrls: vehicleUrls, starshipUrls: starshipUrls)
     }
     
     private func parsePersonManual(json: [String: Any]) -> Person? {
@@ -109,6 +146,6 @@ class PersonApi {
         guard let starshipUrls = json["starships"] as? [String] else{print("starshipUrls error");return nil}
         
         
-        return Person(name: name, height: height, mass: mass, hair: hair, birthYear: birthYear, gender: gender, homeworldUrl: homeworldUrl, filmUrls: filmUrls, vehicleUrls: vehicleUrls, starshipUrls: starshipUrls)
+        return Person(name: name, height: height, mass: mass, hair: hair, birthYear: birthYear, gender: gender, homeworldUrl: homeworldUrl, movieUrls: filmUrls, vehicleUrls: vehicleUrls, starshipUrls: starshipUrls)
     }
 }

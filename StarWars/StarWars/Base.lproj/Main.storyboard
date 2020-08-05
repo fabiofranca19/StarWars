@@ -180,6 +180,56 @@
                                     <action selector="randomPersonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdB-WM-6DL"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-pm-ttY" customClass="BlackBgView" customModule="StarWars" customModuleProvider="target">
+                                <rect key="frame" x="34.5" y="612" width="345" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="0UO-gg-hJK">
+                                        <rect key="frame" x="5" y="5" width="335" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5W-u9-vTd" customClass="FadeEnabledBtn" customModule="StarWars" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="65"/>
+                                                <state key="normal" image="homeworld_icon"/>
+                                                <connections>
+                                                    <action selector="homeWorldBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlV-5s-n29"/>
+                                                    <segue destination="vFl-Ia-2gj" kind="show" identifier="toHomeWorld" id="vjr-FR-Urx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-T6-Z4C" customClass="FadeEnabledBtn" customModule="StarWars" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="50" height="65"/>
+                                                <state key="normal" image="vehicles"/>
+                                                <connections>
+                                                    <action selector="vehiclesBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jg9-RO-RPH"/>
+                                                    <segue destination="Bv8-qa-mZ8" kind="show" identifier="toVehicles" id="QGc-jp-hwk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-8t-kAV" customClass="FadeEnabledBtn" customModule="StarWars" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="50" height="65"/>
+                                                <state key="normal" image="starships"/>
+                                                <connections>
+                                                    <action selector="starshipBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJJ-xp-IqJ"/>
+                                                    <segue destination="hPh-Mc-3Fh" kind="show" identifier="toStarships" id="FlI-Nf-VvX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7c-qO-3FI" customClass="FadeEnabledBtn" customModule="StarWars" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="50" height="65"/>
+                                                <state key="normal" image="films"/>
+                                                <connections>
+                                                    <action selector="movieBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMn-uG-dUO"/>
+                                                    <segue destination="B5O-ub-OEf" kind="show" identifier="toMovies" id="pSx-RJ-Q8m"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="0UO-gg-hJK" firstAttribute="top" secondItem="Lkc-pm-ttY" secondAttribute="top" constant="5" id="5uc-Qs-F68"/>
+                                    <constraint firstAttribute="trailing" secondItem="0UO-gg-hJK" secondAttribute="trailing" constant="5" id="dUJ-c4-k9y"/>
+                                    <constraint firstAttribute="bottom" secondItem="0UO-gg-hJK" secondAttribute="bottom" constant="5" id="rI8-Nj-rGU"/>
+                                    <constraint firstItem="0UO-gg-hJK" firstAttribute="leading" secondItem="Lkc-pm-ttY" secondAttribute="leading" constant="5" id="tzZ-e0-89P"/>
+                                    <constraint firstAttribute="height" constant="75" id="uqy-yf-xd8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -189,6 +239,7 @@
                             <constraint firstItem="Yom-df-b7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hsq-qk-21r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kE5-Si-bBi" secondAttribute="trailing" id="P7j-Ad-Wy7"/>
                             <constraint firstAttribute="trailing" secondItem="Yom-df-b7R" secondAttribute="trailing" constant="20" id="Pvk-Ur-eKa"/>
+                            <constraint firstItem="Lkc-pm-ttY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rte-te-1np"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9lf-XU-guG" secondAttribute="trailing" constant="40" id="Y62-NU-Dxl"/>
                             <constraint firstItem="frT-Oa-pGQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yua-Zb-jhy"/>
                             <constraint firstAttribute="bottom" secondItem="kE5-Si-bBi" secondAttribute="bottom" id="ZO9-Kx-m3F"/>
@@ -196,23 +247,56 @@
                             <constraint firstItem="9lf-XU-guG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eVC-Nn-MlZ"/>
                             <constraint firstItem="Yom-df-b7R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jGn-Xh-7tW"/>
                             <constraint firstItem="frT-Oa-pGQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oRu-iR-6Fi"/>
+                            <constraint firstItem="Lkc-pm-ttY" firstAttribute="top" secondItem="frT-Oa-pGQ" secondAttribute="bottom" constant="15" id="xOa-se-d0H"/>
+                            <constraint firstItem="Lkc-pm-ttY" firstAttribute="width" secondItem="frT-Oa-pGQ" secondAttribute="width" multiplier="0.92246" id="yo8-uX-W6D"/>
                             <constraint firstItem="9lf-XU-guG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zky-Ds-QYE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vpe-o0-wXz"/>
                     <connections>
+                        <outlet property="homeWorldBtn" destination="d5W-u9-vTd" id="icX-1J-hCb"/>
+                        <outlet property="moviesBtn" destination="E7c-qO-3FI" id="2fw-7k-Zqz"/>
                         <outlet property="personBirthYear" destination="1Gy-sW-f5R" id="Uag-8N-Ykx"/>
                         <outlet property="personGender" destination="c1E-As-oT3" id="njp-7c-3Zm"/>
                         <outlet property="personHair" destination="J18-Nh-18s" id="LEz-G8-v1d"/>
                         <outlet property="personHeight" destination="NEG-aE-ULq" id="t05-jZ-mQd"/>
                         <outlet property="personMass" destination="GNs-My-flU" id="naN-VO-NqN"/>
                         <outlet property="personName" destination="lvP-Fe-w0g" id="Dqt-lN-IDk"/>
+                        <outlet property="starshipBtn" destination="GPA-8t-kAV" id="kYK-af-wSR"/>
+                        <outlet property="vehiclesBtn" destination="PhC-T6-Z4C" id="eam-BV-ExT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Homeworld View Controller-->
+        <scene sceneID="FFb-Pv-q7a">
+            <objects>
+                <viewController id="vFl-Ia-2gj" customClass="HomeworldViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gtR-U4-eeU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeworld" translatesAutoresizingMaskIntoConstraints="NO" id="Toj-mU-MTm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nqt-Ga-stn" firstAttribute="trailing" secondItem="Toj-mU-MTm" secondAttribute="trailing" id="6bT-aA-bkG"/>
+                            <constraint firstItem="Toj-mU-MTm" firstAttribute="leading" secondItem="nqt-Ga-stn" secondAttribute="leading" id="Npf-5k-Szj"/>
+                            <constraint firstAttribute="bottom" secondItem="Toj-mU-MTm" secondAttribute="bottom" id="q2L-qt-E9r"/>
+                            <constraint firstItem="Toj-mU-MTm" firstAttribute="top" secondItem="gtR-U4-eeU" secondAttribute="top" id="x7U-AV-bi6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nqt-Ga-stn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GzF-Pm-YvJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Hc-Yk-kbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u0L-My-uKC">
@@ -232,8 +316,97 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
+        <!--Vehicle View Controller-->
+        <scene sceneID="a6U-1Y-srr">
+            <objects>
+                <viewController id="Bv8-qa-mZ8" customClass="VehicleViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a9B-o5-akg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space3" translatesAutoresizingMaskIntoConstraints="NO" id="bao-54-Mpx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hAo-7A-c0p" firstAttribute="trailing" secondItem="bao-54-Mpx" secondAttribute="trailing" id="4lB-od-7b4"/>
+                            <constraint firstItem="bao-54-Mpx" firstAttribute="top" secondItem="a9B-o5-akg" secondAttribute="top" id="7gO-qf-W42"/>
+                            <constraint firstItem="bao-54-Mpx" firstAttribute="leading" secondItem="hAo-7A-c0p" secondAttribute="leading" id="P1Z-Qx-0dK"/>
+                            <constraint firstAttribute="bottom" secondItem="bao-54-Mpx" secondAttribute="bottom" id="hko-Sv-kqg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hAo-7A-c0p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DjN-VP-Wo7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFl-Kv-vAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2659" y="-222"/>
+        </scene>
+        <!--Starship View Controller-->
+        <scene sceneID="wI7-Ov-5LD">
+            <objects>
+                <viewController id="hPh-Mc-3Fh" customClass="StarshipViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kbo-dk-hgp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space4" translatesAutoresizingMaskIntoConstraints="NO" id="xkj-CE-CV1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bBg-nA-nLs" firstAttribute="trailing" secondItem="xkj-CE-CV1" secondAttribute="trailing" id="XJi-9g-jgv"/>
+                            <constraint firstAttribute="bottom" secondItem="xkj-CE-CV1" secondAttribute="bottom" id="eZa-Kp-92D"/>
+                            <constraint firstItem="xkj-CE-CV1" firstAttribute="leading" secondItem="bBg-nA-nLs" secondAttribute="leading" id="r00-VH-RFd"/>
+                            <constraint firstItem="xkj-CE-CV1" firstAttribute="top" secondItem="kbo-dk-hgp" secondAttribute="top" id="yG0-yg-yga"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bBg-nA-nLs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QrC-9U-MSD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpp-uK-pUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2658" y="485"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="Jw0-kY-qLT">
+            <objects>
+                <viewController id="B5O-ub-OEf" customClass="MovieViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgb-ZO-73o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space2" translatesAutoresizingMaskIntoConstraints="NO" id="ADD-mc-IJr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rpZ-uc-1fC" firstAttribute="trailing" secondItem="ADD-mc-IJr" secondAttribute="trailing" id="g1y-ip-yY0"/>
+                            <constraint firstItem="ADD-mc-IJr" firstAttribute="leading" secondItem="rpZ-uc-1fC" secondAttribute="leading" id="gPx-kO-cR2"/>
+                            <constraint firstAttribute="bottom" secondItem="ADD-mc-IJr" secondAttribute="bottom" id="gdE-44-fya"/>
+                            <constraint firstItem="ADD-mc-IJr" firstAttribute="top" secondItem="sgb-ZO-73o" secondAttribute="top" id="tWI-8c-SI7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rpZ-uc-1fC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="twV-Gm-QPS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fef-vs-u6T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861" y="914"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="films" width="50" height="50"/>
+        <image name="homeworld" width="460" height="864"/>
+        <image name="homeworld_icon" width="50" height="50"/>
         <image name="space1" width="699" height="1120"/>
+        <image name="space2" width="329" height="610"/>
+        <image name="space3" width="470" height="877"/>
+        <image name="space4" width="278" height="488"/>
+        <image name="starships" width="50" height="50"/>
+        <image name="vehicles" width="50" height="50"/>
     </resources>
 </document>
