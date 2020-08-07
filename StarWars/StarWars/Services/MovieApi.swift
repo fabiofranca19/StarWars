@@ -1,19 +1,18 @@
 //
-//  HomeWorldApi.swift
+//  MovieApi.swift
 //  StarWars
 //
-//  Created by Fábio França on 05/08/20.
+//  Created by Fábio França on 07/08/20.
 //  Copyright © 2020 music.com.chama. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-class HomeWorldApi {
+class MovieApi {
     
-    func getHomeWorld(url: String, completion: @escaping HomeWorldResponseCompletion) {
-        
-        guard let url = URL(string: url) else{return}
+    func getMovie(url: String, completion: @escaping MovieResponseCompletion) {
+        guard let url = URL(string: url) else { return }
         
         AF.request(url).responseJSON { (response) in
             if let error = response.error {
@@ -23,13 +22,11 @@ class HomeWorldApi {
             
             guard let data = response.data else{ return }
             let decoder = JSONDecoder()
-            
             do{
-                let homeWorld = try decoder.decode(HomeWorld.self, from: data)
-                completion(homeWorld)
+                let movie = try decoder.decode(Movie.self, from: data)
+                completion(movie)
             }catch{
                 debugPrint(error.localizedDescription)
-                return
             }
         }
     }

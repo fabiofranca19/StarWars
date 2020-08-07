@@ -9,16 +9,16 @@
 import Foundation
 
 struct Person: Codable {
-    let name: String
-    let height: String
-    let mass: String
-    let hair: String
-    let birthYear: String
-    let gender: String
-    let homeworldUrl: String
-    let movieUrls: [String]
-    let vehicleUrls: [String]
-    let starshipUrls: [String]
+    var name: String
+    var height: String
+    var mass: String
+    var hair: String
+    var birthYear: String
+    var gender: String
+    var homeworldUrl: String
+    var movieUrls: [String]
+    var vehicleUrls: [String]
+    var starshipUrls: [String]
     
     enum CodingKeys: String, CodingKey {
         case name
